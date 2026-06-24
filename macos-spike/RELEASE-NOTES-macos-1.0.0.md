@@ -33,7 +33,7 @@ See **[INSTALL-macOS.md](INSTALL-macOS.md)**. Short version:
 
 ## Verified
 
-Analog WASD in Minecraft (HE-Keyboard mod) with a **Keychron Q5 HE** on Apple Silicon, plus clean shutdown. Intel runtime validated separately on this release's `.pkg`.
+Analog WASD in Minecraft ([HE-Keyboard mod](https://modrinth.com/mod/hall-effect-analog-keyboard-movement)) with a **Keychron Q5 HE** on Apple Silicon, plus clean shutdown. Intel runtime validated separately on this release's `.pkg`.
 
 ## Source
 
