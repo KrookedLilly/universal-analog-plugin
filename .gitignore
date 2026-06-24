@@ -14,3 +14,6 @@ universal-analog-plugin-with-wooting-device-support/
 *.dylib
 *.so
 lib*.o
+
+# macOS spike harness binary
+macos-spike/read_test
