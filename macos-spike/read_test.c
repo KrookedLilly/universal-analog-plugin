@@ -16,6 +16,7 @@
  * the dylib exports them as _wooting_analog_* per Mach-O mangling. */
 extern int   wooting_analog_initialise(void);
 extern int   wooting_analog_is_initialised(void);
+extern int   wooting_analog_uninitialise(void);
 extern int   wooting_analog_read_full_buffer(unsigned short *code_buffer,
                                              float *analog_buffer,
                                              unsigned int len);
@@ -55,5 +56,6 @@ int main(void) {
     printf("\n%s\n", saw_any
         ? "RESULT: SUCCESS — analog values read through the SDK + forked plugin."
         : "RESULT: no analog values seen. Plugin loaded? Input Monitoring granted? Device matched?");
+    wooting_analog_uninitialise(); /* clean SDK/plugin shutdown (joins plugin threads) */
     return saw_any ? 0 : 2;
 }
