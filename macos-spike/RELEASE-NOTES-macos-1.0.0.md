@@ -1,6 +1,6 @@
 # Universal Analog Plugin — macOS build `macos-1.0.0`
 
-First macOS build of the [Universal Analog Plugin](https://github.com/AnalogSense/universal-analog-plugin) (UAP). It brings analog/variable-pressure input from **command-based Hall-effect keyboards** (Keychron, DrunkDeer, Madlions, and similar) to macOS through the Wooting Analog SDK — so any app built on that SDK (e.g. the [HE-Keyboard Minecraft mod](https://github.com/KrookedLilly/minecraft-he-keyboard), or a Unity project using the Wooting SDK) gets non-Wooting HE keyboards on the Mac.
+First macOS build of the [Universal Analog Plugin](https://github.com/AnalogSense/universal-analog-plugin) (UAP). It brings analog/variable-pressure input from **command-based Hall-effect keyboards** (Keychron, DrunkDeer, Madlions, and similar) to macOS through the Wooting Analog SDK — so any app built on that SDK (e.g. the [HE-Keyboard Minecraft mod](https://modrinth.com/mod/hall-effect-analog-keyboard-movement), or a Unity project using the Wooting SDK) gets non-Wooting HE keyboards on the Mac.
 
 The stock upstream UAP doesn't work on macOS for these boards: its HID layer (the `Soup` library) had four macOS bugs that broke every keyboard needing command writes. This build is a KrookedLilly fork with those bugs fixed.
 
