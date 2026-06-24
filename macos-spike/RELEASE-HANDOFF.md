@@ -16,7 +16,8 @@ compaction.
 - ✅ **Universal (arm64+x86_64) dylib built clean** (`macos-spike/abiv1-universal.dylib`, gitignored):
   `lipo -archs` = `x86_64 arm64`, both frameworks linked, 0 warnings. x86_64 *compiles* clean;
   Intel *runtime* still to be verified on the Intel Mac. Rebuild command below.
-- ⛔ NOT done: packaging (.pkg), code-sign/notarize, GitHub Release, install guide, announcement, Intel-Mac runtime test.
+- ✅ **Packaged + signed + notarized**: `UAP-macOS-1.0.0.pkg` (Step B done 2026-06-24; details below).
+- ⛔ NOT done: Intel-Mac runtime test (Step C), GitHub Release (Step D), install guide + announcement (Step E).
 
 ## Capabilities now available (the user)
 
@@ -63,9 +64,16 @@ otool -L macos-spike/abiv1-universal.dylib | grep -iE "IOKit|CoreFoundation"
 Built `macos-spike/abiv1-universal.dylib` (`x86_64 arm64`, frameworks linked, 0 warnings).
 This is the artifact to sign in Step B. (Rebuild with the command above if needed.)
 
-### Step B — Package as signed + notarized `.pkg` (recommended over a zip)
-A `.pkg` handles Gatekeeper (notarize+staple), the sudo install (pkg self-escalates), and ships
-the universal dylib. Template (user supplies their Developer ID identities):
+### Step B — Package as signed + notarized `.pkg` ✅ DONE (2026-06-24)
+Built via `macos-spike/build-pkg.sh` (committed). Artifact `UAP-macOS-1.0.0.pkg` (2.6 MB,
+gitignored — ships on the GitHub Release, not in the repo):
+- SHA-256 `204b37625727b7bfc74a51d0450f50754b69539fbaccf25396b677e34676ca97`
+- Signed: dylib → *Developer ID Application: KrookedLilly LLC (CJ6VS87K3J)*; pkg → *Developer ID Installer* (same team).
+- Notary submission `2c430e61-db6d-4132-8a37-dba44a204b5c` → **Accepted**; stapled; `stapler validate` passes offline; `spctl --assess --type install` = accepted / Notarized Developer ID.
+- Installs `universal-analog-plugin/abiv1.dylib` into `/usr/local/share/WootingAnalogPlugins`. Embedded dylib stays universal (`x86_64 arm64`) + hardened runtime.
+- Notary profile in keychain: `uap-notary`. Rebuild anytime with `./macos-spike/build-pkg.sh` (or `NOTARIZE=0` for a dry run).
+
+Original template (kept for reference):
 
 ```bash
 # 1. sign the dylib with the *Application* cert
