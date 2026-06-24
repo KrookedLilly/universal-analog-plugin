@@ -20,3 +20,5 @@ macos-spike/read_test
 macos-spike/kcprobe
 macos-spike/kcprobe2
 macos-spike/kcprobe3
+macos-spike/abiv1-universal.dylib
+macos-spike/universal-build.log
