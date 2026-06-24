@@ -4,5 +4,13 @@ require Soup/soup include_dir=Soup
 
 arg -O3
 
+if macos
+    linker_arg -framework
+    linker_arg IOKit
+    linker_arg -framework
+    linker_arg CoreFoundation
+    linker_arg wooting_analog_common.a
+endif
+
 name abiv0
 arg -DABI_VERSION_TARGET=0
