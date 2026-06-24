@@ -6,6 +6,9 @@ universal-analog-plugin-with-wooting-device-support/
 # Build folders, manually zipped
 *.zip
 
+# Signed installer artifacts (distributed via GitHub Release, not committed)
+*.pkg
+
 # Unnamed .sun file for Ctrl+B can be used-defined
 .sun
 
