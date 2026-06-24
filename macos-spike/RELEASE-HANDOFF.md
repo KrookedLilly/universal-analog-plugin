@@ -13,8 +13,10 @@ compaction.
 - ✅ Four Soup macOS HID bugs fixed; **upstream PR open: [calamity-inc/Soup#180](https://github.com/calamity-inc/Soup/pull/180)** (1 clean commit).
 - ✅ Forks pushed: `KrookedLilly/universal-analog-plugin` (branch `macos`) + `KrookedLilly/Soup` (branch `macos`).
 - ✅ he-keyboard repo docs reconciled on branch `docs/macos-uap-spike` (CLAUDE.md, README macOS note, `docs/klpm-he-keyboard-handoff.md`).
-- ⏳ **Universal (arm64+x86_64) dylib** build kicked off — verify artifact (see below).
-- ⛔ NOT done: packaging (.pkg), code-sign/notarize, GitHub Release, install guide, announcement, Intel-Mac test.
+- ✅ **Universal (arm64+x86_64) dylib built clean** (`macos-spike/abiv1-universal.dylib`, gitignored):
+  `lipo -archs` = `x86_64 arm64`, both frameworks linked, 0 warnings. x86_64 *compiles* clean;
+  Intel *runtime* still to be verified on the Intel Mac. Rebuild command below.
+- ⛔ NOT done: packaging (.pkg), code-sign/notarize, GitHub Release, install guide, announcement, Intel-Mac runtime test.
 
 ## Capabilities now available (the user)
 
@@ -57,8 +59,9 @@ otool -L macos-spike/abiv1-universal.dylib | grep -iE "IOKit|CoreFoundation"
 
 ## Remaining plan
 
-### Step A — Universal dylib (nearly done)
-Confirm `lipo -archs` shows both arches + frameworks linked.
+### Step A — Universal dylib ✅ DONE
+Built `macos-spike/abiv1-universal.dylib` (`x86_64 arm64`, frameworks linked, 0 warnings).
+This is the artifact to sign in Step B. (Rebuild with the command above if needed.)
 
 ### Step B — Package as signed + notarized `.pkg` (recommended over a zip)
 A `.pkg` handles Gatekeeper (notarize+staple), the sudo install (pkg self-escalates), and ships
