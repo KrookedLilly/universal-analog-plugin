@@ -1,0 +1,11 @@
++kcprobe3.cpp
+require ../Soup/soup include_dir=../Soup
+
+arg -O2
+
+if macos
+    linker_arg -framework
+    linker_arg IOKit
+    linker_arg -framework
+    linker_arg CoreFoundation
+endif

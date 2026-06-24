@@ -18,3 +18,5 @@ lib*.o
 # macOS spike harness binaries
 macos-spike/read_test
 macos-spike/kcprobe
+macos-spike/kcprobe2
+macos-spike/kcprobe3
