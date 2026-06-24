@@ -63,21 +63,19 @@ Standalone Soup-linked probes isolated each layer without the SDK/JVM:
 ## Verification status
 
 - ✅ `read_test` (full SDK path): `RESULT: SUCCESS`, analog depth values, clean exit.
+- ✅ **In-game (Minecraft via Prism + HE-Keyboard mod): confirmed** — analog WASD on the
+  Keychron Q5 HE, clean game exit (no teardown crash). This is the real end-to-end result.
 - ✅ Keychron Q5 HE (primary, daily driver). DrunkDeer A75 not yet retested post-fix
   (same code path; expected to work). Razer Huntsman V3 Pro remains **out** on macOS
   (needs Razer Synapse, which is Windows-only).
-- ⏳ In-game (Minecraft + HE-Keyboard mod): to be confirmed by launching the mod — the
-  chain is identical to `read_test`, so this is expected to work.
 
 ## Remaining / future work
 
-- **In-game confirmation** with the actual mod (manual, human).
 - **`abiv0` for older SDKs**: build `wooting_analog_common.a` for `aarch64-apple-darwin`
   (rustup + `cargo build --target aarch64-apple-darwin`) if support for SDK ≤0.7 is wanted.
   Not needed for SDK 0.8.
-- **Upstream the Soup fixes** to `calamity-inc/Soup`. All four are general macOS correctness
-  fixes that benefit every consumer (they make Keychron/DrunkDeer/Madlions work on macOS at
-  all). Strong PR candidate.
+- ✅ **Upstreamed**: the four Soup fixes are proposed in **[calamity-inc/Soup#180](https://github.com/calamity-inc/Soup/pull/180)**
+  (squashed to one clean commit; the defensive reopen-retry was dropped). Pending maintainer review.
 - **Install ergonomics**: codesigning/notarization, a user-facing install script, and the
   HE-Keyboard mod's v2 device-status docs.
 - **`build.sh` end users** need the `sun` build tool on PATH (or `suncli` symlinked).
