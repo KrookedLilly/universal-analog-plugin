@@ -10,7 +10,7 @@ compaction.
 - ✅ macOS UAP **works end-to-end**, verified in real Minecraft (Prism) with a Keychron Q5 HE:
   analog WASD + clean game exit. Also fixes the **Unity asset** on macOS for free (same native
   SDK→plugin→Soup chain; no Unity code change needed).
-- ✅ Four Soup macOS HID bugs fixed; **upstream PR open: [calamity-inc/Soup#180](https://github.com/calamity-inc/Soup/pull/180)** (1 clean commit).
+- ✅ Four Soup macOS HID bugs fixed; **merged upstream: [calamity-inc/Soup#180](https://github.com/calamity-inc/Soup/pull/180)** (1 clean commit). An official UAP macOS release built against the updated Soup will eventually supersede our fork.
 - ✅ Forks pushed: `KrookedLilly/universal-analog-plugin` (branch `macos`) + `KrookedLilly/Soup` (branch `macos`).
 - ✅ he-keyboard repo docs reconciled on branch `docs/macos-uap-spike` (CLAUDE.md, README macOS note, `docs/klpm-he-keyboard-handoff.md`).
 - ✅ **Universal (arm64+x86_64) dylib built clean** (`macos-spike/abiv1-universal.dylib`, gitignored):

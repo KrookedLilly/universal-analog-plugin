@@ -1,9 +1,9 @@
 # Announcement / changelog copy — macOS cross-vendor support
 
 Reusable copy for the mod's store/listing pages, the Unity Asset Store listing, and social.
-Framing per the release: this is an **interim KrookedLilly build** while the fix is under review
-upstream ([Soup#180](https://github.com/calamity-inc/Soup/pull/180)); the official plugin will
-replace it once merged.
+Framing per the release: the fix is now **merged upstream** ([Soup#180](https://github.com/calamity-inc/Soup/pull/180)),
+and this remains an **interim KrookedLilly build** until the Universal Analog Plugin ships a macOS
+release built against the updated Soup — that official release will replace this one.
 
 ---
 
@@ -22,7 +22,8 @@ replace it once merged.
 >
 > If you're on macOS with a Keychron, DrunkDeer, Madlions, or similar HE keyboard, install the
 > Wooting Analog SDK plus our macOS Universal Analog Plugin build and you're set. The fixes are
-> proposed upstream; this is an interim build until the official plugin ships them.
+> merged upstream ([Soup#180](https://github.com/calamity-inc/Soup/pull/180)); this is an interim
+> build until the official plugin ships a macOS release that includes them.
 >
 > Install guide → [link to INSTALL-macOS.md / release]
 > (Razer analog keyboards remain unsupported on macOS — they require Windows-only Synapse.)
@@ -44,9 +45,9 @@ replace it once merged.
 > fixed, analog WASD works end-to-end — verified in Minecraft with a Keychron Q5 HE, clean startup
 > and shutdown.
 >
-> The fixes are open-source and proposed upstream as
+> The fixes are open-source and now merged upstream in
 > [calamity-inc/Soup#180](https://github.com/calamity-inc/Soup/pull/180). Until they ship in an
-> official UAP release, macOS users of non-Wooting HE boards can use our signed, notarized build.
+> official UAP macOS release, macOS users of non-Wooting HE boards can use our signed, notarized build.
 > The same fix also makes our Unity HE-Keyboard asset support these boards on macOS — same native
 > SDK chain, no code change.
 >

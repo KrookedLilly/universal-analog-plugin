@@ -4,7 +4,7 @@ First macOS build of the [Universal Analog Plugin](https://github.com/AnalogSens
 
 The stock upstream UAP doesn't work on macOS for these boards: its HID layer (the `Soup` library) had four macOS bugs that broke every keyboard needing command writes. This build is a KrookedLilly fork with those bugs fixed.
 
-> **Interim build.** The four fixes are proposed upstream in **[calamity-inc/Soup#180](https://github.com/calamity-inc/Soup/pull/180)**. Once they land in an official UAP release, that release supersedes this one. Until then, macOS users of non-Wooting HE boards need this build.
+> **Interim build.** The four fixes are now **merged upstream in [calamity-inc/Soup#180](https://github.com/calamity-inc/Soup/pull/180)**. They reach end users once the Universal Analog Plugin ships a macOS release built against the updated Soup — that release supersedes this one. Until then, macOS users of non-Wooting HE boards need this build.
 
 ## What's in the download
 
@@ -38,4 +38,4 @@ Analog WASD in Minecraft ([HE-Keyboard mod](https://modrinth.com/mod/hall-effect
 ## Source
 
 - Plugin fork: [`KrookedLilly/universal-analog-plugin`](https://github.com/KrookedLilly/universal-analog-plugin) (branch `macos`)
-- HID fixes: [`KrookedLilly/Soup`](https://github.com/KrookedLilly/Soup) (branch `macos`) → upstream PR [calamity-inc/Soup#180](https://github.com/calamity-inc/Soup/pull/180)
+- HID fixes: [`KrookedLilly/Soup`](https://github.com/KrookedLilly/Soup) (branch `macos`) → merged upstream in [calamity-inc/Soup#180](https://github.com/calamity-inc/Soup/pull/180)

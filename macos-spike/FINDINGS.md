@@ -74,8 +74,9 @@ Standalone Soup-linked probes isolated each layer without the SDK/JVM:
 - **`abiv0` for older SDKs**: build `wooting_analog_common.a` for `aarch64-apple-darwin`
   (rustup + `cargo build --target aarch64-apple-darwin`) if support for SDK ≤0.7 is wanted.
   Not needed for SDK 0.8.
-- ✅ **Upstreamed**: the four Soup fixes are proposed in **[calamity-inc/Soup#180](https://github.com/calamity-inc/Soup/pull/180)**
-  (squashed to one clean commit; the defensive reopen-retry was dropped). Pending maintainer review.
+- ✅ **Upstreamed + merged**: the four Soup fixes are in **[calamity-inc/Soup#180](https://github.com/calamity-inc/Soup/pull/180)**
+  (squashed to one clean commit; the defensive reopen-retry was dropped). Merged upstream. An
+  official UAP macOS release built against the updated Soup will eventually supersede our fork build.
 - **Install ergonomics**: codesigning/notarization, a user-facing install script, and the
   HE-Keyboard mod's v2 device-status docs.
 - **`build.sh` end users** need the `sun` build tool on PATH (or `suncli` symlinked).
