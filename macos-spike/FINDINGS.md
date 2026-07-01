@@ -65,6 +65,9 @@ Standalone Soup-linked probes isolated each layer without the SDK/JVM:
 - ✅ `read_test` (full SDK path): `RESULT: SUCCESS`, analog depth values, clean exit.
 - ✅ **In-game (Minecraft via Prism + HE-Keyboard mod): confirmed** — analog WASD on the
   Keychron Q5 HE, clean game exit (no teardown crash). This is the real end-to-end result.
+- ✅ **Apple Silicon AND Intel** both runtime-verified: the universal `abiv1.dylib`'s x86_64 slice
+  was validated on a real Intel Mac via the Minecraft mod (2026-06-30) — analog WASD + clean exit.
+  Released as GitHub `macos-1.0.0` on `KrookedLilly/universal-analog-plugin`.
 - ✅ Keychron Q5 HE (primary, daily driver). DrunkDeer A75 not yet retested post-fix
   (same code path; expected to work). Razer Huntsman V3 Pro remains **out** on macOS
   (needs Razer Synapse, which is Windows-only).

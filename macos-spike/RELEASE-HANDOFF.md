@@ -14,10 +14,15 @@ compaction.
 - ✅ Forks pushed: `KrookedLilly/universal-analog-plugin` (branch `macos`) + `KrookedLilly/Soup` (branch `macos`).
 - ✅ he-keyboard repo docs reconciled on branch `docs/macos-uap-spike` (CLAUDE.md, README macOS note, `docs/klpm-he-keyboard-handoff.md`).
 - ✅ **Universal (arm64+x86_64) dylib built clean** (`macos-spike/abiv1-universal.dylib`, gitignored):
-  `lipo -archs` = `x86_64 arm64`, both frameworks linked, 0 warnings. x86_64 *compiles* clean;
-  Intel *runtime* still to be verified on the Intel Mac. Rebuild command below.
-- ✅ **Packaged + signed + notarized**: `UAP-macOS-1.0.0.pkg` (Step B done 2026-06-24; details below).
-- ⛔ NOT done: Intel-Mac runtime test (Step C), GitHub Release (Step D), install guide + announcement (Step E).
+  `lipo -archs` = `x86_64 arm64`, both frameworks linked, 0 warnings.
+- ✅ **Packaged + signed + notarized**: `UAP-macOS-1.0.0.pkg` (Step B done 2026-06-24).
+- ✅ **Intel runtime validated (2026-06-30)** via the Minecraft mod on a real Intel Mac — analog WASD
+  from a non-Wooting board + clean exit. Both arches now runtime-verified (Step C done).
+- ✅ **Released (2026-06-30)**: GitHub Release `macos-1.0.0` published on `KrookedLilly/universal-analog-plugin`
+  with `UAP-macOS-1.0.0.pkg` attached → <https://github.com/KrookedLilly/universal-analog-plugin/releases/tag/macos-1.0.0> (Step D done).
+- ⛔ Remaining: **Unity asset** docs/listing update to point at the published release (asset lives on;
+  its handoff: `unity/assets/he-keyboard-asset/HANDOFF-native-sdk-and-macOS-fixes.md`). Install guide +
+  announcement copy already written (`macos-spike/INSTALL-macOS.md`, `ANNOUNCEMENT.md`).
 
 ## Capabilities now available (the user)
 
